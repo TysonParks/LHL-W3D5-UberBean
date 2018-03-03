@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @import MapKit;
+@import CoreLocation;
 
 @interface ViewController : UIViewController
 

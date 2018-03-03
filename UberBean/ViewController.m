@@ -26,6 +26,7 @@
     self.locationManager = [[CLLocationManager alloc]init];
     [self.
      locationManager requestWhenInUseAuthorization];
+    self.mapView.showsUserLocation = YES;
     
     
 }
