@@ -38,12 +38,22 @@
 -(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
     if (status == kCLAuthorizationStatusAuthorizedWhenInUse) {
         [self.locationManager requestLocation];
+        
+        
     }
 }
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
-    NSLog(@"didUpdateLocations: %@", locations);
+//    NSLog(@"didUpdateLocations: %@", locations);
+    
+    CLLocation *myLocation = locations[0];
+    
+    MKCoordinateRegion region = MKCoordinateRegionMake(myLocation.coordinate, MKCoordinateSpanMake(4.0/111.0, 4.0/111.0));
+    
+    
+    [self.mapView setRegion:region animated:YES];
 }
+
 
 -(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
     NSLog(@"didFailWithError: %@", error);
