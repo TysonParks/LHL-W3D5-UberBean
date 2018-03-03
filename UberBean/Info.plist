@@ -41,7 +41,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>LSApplicationCategoryType</key>
+	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Allow me to access your location so that I can spy on you.</string>
 </dict>
 </plist>
