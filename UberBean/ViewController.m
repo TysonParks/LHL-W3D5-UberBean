@@ -10,9 +10,11 @@
 
 @interface ViewController ()
 
+@property (strong, nonatomic) CLLocationManager *locationManager;
+
+
+
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
-
-
 
 @end
 
@@ -20,7 +22,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.locationManager = [[CLLocationManager alloc]init];
+    [self.locationManager requestWhenInUseAuthorization];
+    
+    
 }
 
 
